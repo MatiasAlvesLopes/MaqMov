@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #006a05;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+header .container{
+    align-items: center;
+    padding: 0;
+}
+
+main .container{
+    align-items: center;
+}
+
+header, main, footer{
+    display: flex;
+    justify-content: center;
+    flex: 1 1 100vw;
+    background: #e8e7e7;
+}
+
+header{
+    width: 100%;
+    top: 0;
+    position: sticky;
+    
+    .icon-menu-abrir{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+    }
+
+    .logo{
+        flex: 1 1 0vw;
+        
+        .logo-do-header img{
+            width: 200px;
+        }
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        flex: 1 1 30vw;
+        display: flex;
+        justify-content: space-around;
+
+        .icon-menu-fechar{
+            display: none;
+        }
+
+        a{
+            display: flex;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #063c13;
+
+            .whatsapp-do-faleComUmEspecialista{
+                width: 30px;
+                margin-left: 8px;
+            }
+        }
+
+        a:hover{
+            color: #039525;
+        }
+    }
+    
+    .outros-links-do-header{
+        flex: 1 1 0vw;
+        display: flex;
+        justify-content: end;
+    
+        a{
+            margin-left: 8px;
+        }
+
+        .icon-midia img{
+            width: 35px;
+        }
+
+        .logo-do-header img{
+            width: 200px;
+        }
+    }
+}
+
+.hero-main{
+    padding: 120px 0;
+    background: linear-gradient(to top, #008000eb, rgba(0, 128, 0, 0.055)), url(../img-pecas/imagem-do-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .hero{
+        width: 40%;
+    }
+    
+    color: white;
+    
+    h1{
+        font-size: 5rem;
+        margin-bottom: 50px;
+    }
+
+    p{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 1420px){
+    header{
+        .menu{
+            flex: 1 1 40vw;
+        }
+    }
+
+    .hero-main{
+        padding: 80px 20px;
+
+        .hero{
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 1300px){
+
+    header{
+        padding: 15px;
+
+        .icon-menu-abrir{
+            cursor: pointer;
+            display: flex;
+            flex: 0.4 1 0vw;
+            align-items: center;
+            
+            img{
+                width: 23px;
+            }
+        }
+
+        .logo{
+            display: flex;
+            justify-content: start;
+
+            .logo-do-header img{
+                width: 200px;
+            }
+        }
+
+        .menu{
+            position: fixed;
+            width: 250px;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: #ffffff;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+
+            transform: translateX(-100%);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+
+            .icon-menu-fechar{
+                display: flex;
+                margin-bottom: 30px;
+
+                img{
+                    width: 23px;
+                }
+            }
+
+            a{
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                text-align: start;
+                justify-content: flex-start;
+                
+                width: 100%;
+                padding: 0;
+
+                .whatsapp-do-faleComUmEspecialista{
+                    width: 25px;
+                    margin-right: 10%;
+                }
+            }
+        }
+
+        .menu.on{
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .outros-links-do-header{
+            justify-content: center;
+
+            .icon-midia img{
+                width: 20px;
+            }
+
+            .logo-do-header img{
+                width: 200px;
+            }
+        }
+    }
+
+    .hero-main{
+        h1{
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+        }
+
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media(max-width: 545px){
+    header{
+        .logo{
+            .logo-do-header img{
+                width: 120px;
+            }
+        }
+
+        .outros-links-do-header{
+            .logo-do-header img{
+                width: 120px;
+            }
+        }
+    }
+
+    .hero-main{
+        padding: 50px 0;
+
+        .hero{
+            width: 90%;
+        }
+
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
