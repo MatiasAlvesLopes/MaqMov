@@ -110,7 +110,7 @@ header{
 
 .hero-main{
     padding: 120px 0;
-    background: linear-gradient(to top, #008000eb, rgba(0, 128, 0, 0.055)), url(../img-locacao/hero-locacao.jpg);
+    background: linear-gradient(to top, #008000eb, rgba(0, 128, 0, 0.055)), url(../img/empilhadeira-hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -538,3 +538,4 @@ footer{
     }
 
 }
+
